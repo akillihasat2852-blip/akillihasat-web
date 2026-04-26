@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SortAI – Yapay Zeka Destekli Meyve Ayrıştırma Sistemi | Teknofest 2026</title>
+  <meta name="description" content="YOLOv11 yapay zeka modeli ile çalışan akıllı konveyör bant meyve ayrıştırma sistemi. Teknofest 2026 girişim projesi – Mustafa Genç & Ceren Önal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">🍎</span>
+        <span class="logo-text">Sort<span class="logo-accent">AI</span></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#sistem">Sistem</a></li>
+        <li><a href="#nasil-calisir">Nasıl Çalışır?</a></li>
+        <li><a href="#teknoloji">Teknoloji</a></li>
+        <li><a href="#ozellikler">Özellikler</a></li>
+        <li><a href="#ekip">Ekip</a></li>
+      </ul>
+      <a href="#iletisim" class="nav-cta">İletişim</a>
+      <button class="hamburger" id="hamburger" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Teknofest 2026 · Girişimcilik
+      </div>
+      <h1 class="hero-title">
+        Meyveleri<br />
+        <span class="gradient-text">Yapay Zeka</span> ile<br />
+        Ayrıştırıyoruz
+      </h1>
+      <p class="hero-desc">
+        YOLOv11 tabanlı görüntü işleme ve Raspberry Pi 5 altyapısıyla çalışan
+        tam otomatik konveyör bant sistemi. Çürük meyveyi milisaniyeler içinde
+        tespit eder, üretim hattı verimliliğini katlayarak artırır.
+      </p>
+      <div class="hero-actions">
+        <a href="#nasil-calisir" class="btn btn-primary">
+          <span>Nasıl Çalışır?</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#teknoloji" class="btn btn-ghost">Teknolojiyi Keşfet</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-val" data-target="95">0</span><span class="stat-unit">%</span>
+          <span class="stat-label">Tespit Doğruluğu</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val" data-target="120">0</span><span class="stat-unit">ms</span>
+          <span class="stat-label">Analiz Süresi</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val" data-target="2">0</span><span class="stat-unit"> kamera</span>
+          <span class="stat-label">Çok Açılı Görüş</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrapper">
+        <img src="assets/hero.png" alt="SortAI Meyve Ayrıştırma Sistemi" id="heroImg" />
+        <div class="img-glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SİSTEM ÖZET ────────────────────────────────────────────────────── -->
+  <section id="sistem" class="section">
+    <div class="container">
+      <div class="section-label">Sistem</div>
+      <h2 class="section-title">Akıllı Konveyör Bant Otomasyonu</h2>
+      <p class="section-desc">
+        Üretim bandından geçen her meyve, iki kamera tarafından anlık olarak görüntülenir.
+        YOLOv11 modeli sağlam ve çürük meyveleri milisaniyeler içinde ayırt eder;
+        servo kollar ve pnömatik kapılar meyveyi doğru sepete yönlendirir.
+      </p>
+
+      <div class="flow-steps">
+        <div class="flow-step reveal">
+          <div class="step-icon">📡</div>
+          <div class="step-num">01</div>
+          <h3>IR Sensör Algılama</h3>
+          <p>Meyve konveyöre girince giriş IR sensörü sistemi uyandırır ve kamerayı tetikler.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step reveal">
+          <div class="step-icon">📷</div>
+          <div class="step-num">02</div>
+          <h3>Çok Açılı Görüntüleme</h3>
+          <p>Üst ve yan kameralar eş zamanlı görüntü alır; step motor meyveyi kendi etrafında döndürür.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step reveal">
+          <div class="step-icon">🧠</div>
+          <div class="step-num">03</div>
+          <h3>YOLOv11 Analizi</h3>
+          <p>Yapay zeka modeli meyvedeki çürük ve lekeleri güven skoru ile birlikte analiz eder.</p>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step reveal">
+          <div class="step-icon">⚙️</div>
+          <div class="step-num">04</div>
+          <h3>Mekanik Ayrıştırma</h3>
+          <p>Servo kollar ve kapı meyveyi "Sağlam" veya "Çürük" sepetine yönlendirir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NASIL ÇALIŞIR ──────────────────────────────────────────────────── -->
+  <section id="nasil-calisir" class="section section-dark">
+    <div class="container">
+      <div class="section-label">Çalışma Prensibi</div>
+      <h2 class="section-title">Gerçek Zamanlı Karar Motoru</h2>
+
+      <div class="two-col">
+        <div class="two-col-text reveal">
+          <div class="feature-list">
+            <div class="feature-item">
+              <div class="feature-icon">🔬</div>
+              <div>
+                <h4>Anlık Görüntü İşleme</h4>
+                <p>OpenCV ile alınan ham görüntüler filtreler, kırpma ve renk dönüşümlerinden geçerek YOLOv11'e beslenir.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <div>
+                <h4>Paralel Kamera Mimarisi</h4>
+                <p>İki kamera aynı anda Thread tabanlı paralel işlemle okunur; bant sürekli akar, darboğaz oluşmaz.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🛡️</div>
+              <div>
+                <h4>Watchdog Güvenlik Sistemi</h4>
+                <p>Sistem kilitlenirse Watchdog modülü 10 saniyede tespit edip otomatik kurtarma başlatır.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📊</div>
+              <div>
+                <h4>Canlı Veri Takibi</h4>
+                <p>TFT dokunmatik ekranda sağlam/çürük sayaçları, CPU sıcaklığı ve RAM kullanımı anlık gösterilir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hardware-card reveal">
+          <div class="hw-title">Donanım Özeti</div>
+          <div class="hw-grid">
+            <div class="hw-item">
+              <span class="hw-icon">🖥️</span>
+              <div>
+                <div class="hw-name">Raspberry Pi 5</div>
+                <div class="hw-desc">Ana kontrol birimi</div>
+              </div>
+            </div>
+            <div class="hw-item">
+              <span class="hw-icon">🤖</span>
+              <div>
+                <div class="hw-name">YOLOv11 Modeli</div>
+                <div class="hw-desc">AI görüntü analizi</div>
+              </div>
+            </div>
+            <div class="hw-item">
+              <span class="hw-icon">📺</span>
+              <div>
+                <div class="hw-name">2.4″ ILI9341 TFT</div>
+                <div class="hw-desc">Dokunmatik arayüz</div>
+              </div>
+            </div>
+            <div class="hw-item">
+              <span class="hw-icon">⚙️</span>
+              <div>
+                <div class="hw-name">L298N Motor Sürücü</div>
+                <div class="hw-desc">Konveyör & LED kontrolü</div>
+              </div>
+            </div>
+            <div class="hw-item">
+              <span class="hw-icon">🎯</span>
+              <div>
+                <div class="hw-name">IR Sensörler (3×)</div>
+                <div class="hw-desc">Giriş & çıkış algılama</div>
+              </div>
+            </div>
+            <div class="hw-item">
+              <span class="hw-icon">🔄</span>
+              <div>
+                <div class="hw-name">Servo & Step Motor</div>
+                <div class="hw-desc">Mekanik ayrıştırma</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TEKNOLOJİ ──────────────────────────────────────────────────────── -->
+  <section id="teknoloji" class="section">
+    <div class="container">
+      <div class="section-label">Teknoloji Yığını</div>
+      <h2 class="section-title">Kullanılan Teknolojiler</h2>
+      <p class="section-desc">
+        Endüstriyel düzeyde güvenilirlik için özenle seçilmiş açık kaynaklı araç seti.
+      </p>
+
+      <div class="tech-grid">
+        <div class="tech-card reveal" style="--clr: #4ade80;">
+          <div class="tech-logo">🧠</div>
+          <h3>YOLOv11</h3>
+          <p>Ultralytics'in son nesil nesne tespit modeli. Milisaniyeler içinde çürük bölgeleri tespit eder.</p>
+          <div class="tech-tag">Yapay Zeka</div>
+        </div>
+        <div class="tech-card reveal" style="--clr: #60a5fa;">
+          <div class="tech-logo">📷</div>
+          <h3>OpenCV</h3>
+          <p>Gerçek zamanlı görüntü akışı, renk dönüşümü ve çerçeve filtresi işlemleri için kullanılır.</p>
+          <div class="tech-tag">Görüntü İşleme</div>
+        </div>
+        <div class="tech-card reveal" style="--clr: #f472b6;">
+          <div class="tech-logo">🐍</div>
+          <h3>Python 3.11</h3>
+          <p>Threading, asyncio ve GPIO kütüphaneleriyle entegre tam kontrol sistemi.</p>
+          <div class="tech-tag">Yazılım</div>
+        </div>
+        <div class="tech-card reveal" style="--clr: #fb923c;">
+          <div class="tech-logo">🖥️</div>
+          <h3>Raspberry Pi 5</h3>
+          <p>4-çekirdek ARM Cortex-A76 işlemci ile tüm AI ve GPIO işlemleri tek kart üzerinde yürütülür.</p>
+          <div class="tech-tag">Donanım</div>
+        </div>
+        <div class="tech-card reveal" style="--clr: #a78bfa;">
+          <div class="tech-logo">🗃️</div>
+          <h3>SQLite</h3>
+          <p>Her ayrıştırma kararı, zaman damgası ve güven skoru ile birlikte yerel veritabanına kaydedilir.</p>
+          <div class="tech-tag">Veri</div>
+        </div>
+        <div class="tech-card reveal" style="--clr: #34d399;">
+          <div class="tech-logo">📡</div>
+          <h3>Adafruit CircuitPython</h3>
+          <p>ILI9341 TFT ekran ve XPT2046 dokunmatik sürücüsü SPI üzerinden Raspberry Pi'ye entegre edilir.</p>
+          <div class="tech-tag">Ekran</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ÖZELLİKLER ────────────────────────────────────────────────────── -->
+  <section id="ozellikler" class="section section-dark">
+    <div class="container">
+      <div class="section-label">Özellikler</div>
+      <h2 class="section-title">Rakiplerden Farkımız</h2>
+
+      <div class="compare-table reveal">
+        <div class="compare-header">
+          <div></div>
+          <div class="compare-col our">SortAI</div>
+          <div class="compare-col other">Geleneksel Yöntem</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Tespit Doğruluğu</div>
+          <div class="compare-col our">✅ %95+</div>
+          <div class="compare-col other">❌ %60–70</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Analiz Hızı</div>
+          <div class="compare-col our">✅ &lt;120ms/meyve</div>
+          <div class="compare-col other">❌ Manuel, yavaş</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Çok Açılı Görüş</div>
+          <div class="compare-col our">✅ Üst + Yan kamera</div>
+          <div class="compare-col other">❌ Tek yüzey</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Otomatik Kurtarma</div>
+          <div class="compare-col our">✅ Watchdog sistemi</div>
+          <div class="compare-col other">❌ Manuel müdahale</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Canlı Ayar</div>
+          <div class="compare-col our">✅ Dokunmatik menü</div>
+          <div class="compare-col other">❌ Yok</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Veri Kaydı</div>
+          <div class="compare-col our">✅ SQLite DB + log</div>
+          <div class="compare-col other">❌ Yok</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Ölçeklenebilirlik</div>
+          <div class="compare-col our">✅ Modüler mimari</div>
+          <div class="compare-col other">❌ Sabit hat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EKİP ──────────────────────────────────────────────────────────── -->
+  <section id="ekip" class="section">
+    <div class="container">
+      <div class="section-label">Ekip</div>
+      <h2 class="section-title">Projeyi Geliştiren Ekip</h2>
+
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar" style="background: linear-gradient(135deg,#6366f1,#8b5cf6);">MG</div>
+          <h3>Mustafa Genç</h3>
+          <div class="team-role">Elektrik Elektronik Mühendisi · Sistem Tasarımı & 3D Modelleme</div>
+          <p class="team-bio">
+            Konveyör bant mekanik mimarisini tasarladı, tüm donanım bileşenlerini
+            sisteme entegre etti ve 3D model üretimini gerçekleştirdi.
+          </p>
+          <div class="team-tags">
+            <span>Sistem Tasarımı</span><span>3D Modelleme</span><span>Donanım</span><span>Mekatronik</span>
+          </div>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar" style="background: linear-gradient(135deg,#ec4899,#f43f5e);">CÖ</div>
+          <h3>Ceren Önal</h3>
+          <div class="team-role">Elektrik Elektronik Mühendisi · Yazılım Geliştirme</div>
+          <p class="team-bio">
+            Ana kontrol yazılımını, YOLOv11 yapay zeka entegrasyonunu,
+            TFT arayüzünü ve tüm gömülü sistem kodunu geliştirdi.
+          </p>
+          <div class="team-tags">
+            <span>Python</span><span>YOLOv11</span><span>OpenCV</span><span>Gömülü Sistem</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── İLETİŞİM ──────────────────────────────────────────────────────── -->
+  <section id="iletisim" class="section section-dark">
+    <div class="container">
+      <div class="contact-box reveal">
+        <div class="section-label">İletişim</div>
+        <h2 class="section-title" style="margin-bottom:1rem;">Bize Ulaşın</h2>
+        <p class="section-desc" style="margin-bottom:2.5rem;">
+          Proje hakkında detaylı bilgi almak veya iş birliği teklifinizi iletmek için
+          aşağıdaki formu doldurun.
+        </p>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Ad Soyad</label>
+              <input type="text" id="name" placeholder="Adınız Soyadınız" required />
+            </div>
+            <div class="form-group">
+              <label for="email">E-posta</label>
+              <input type="email" id="email" placeholder="ornek@eposta.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Mesajınız</label>
+            <textarea id="message" rows="4" placeholder="Mesajınızı buraya yazın..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            <span>Gönder</span>
+            <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+          </button>
+        </form>
+        <div class="form-success" id="formSuccess">
+          ✅ Mesajınız alındı! En kısa sürede geri döneceğiz.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-icon">🍎</span>
+          <span class="logo-text">Sort<span class="logo-accent">AI</span></span>
+        </div>
+        <p class="footer-copy">
+          © 2026 SortAI · Mustafa Genç & Ceren Önal · Teknofest Girişimcilik
+        </p>
+        <div class="footer-badge">
+          <span>🚀</span> Teknofest 2026
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
