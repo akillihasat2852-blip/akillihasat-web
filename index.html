@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SortAI – Yapay Zeka Destekli Meyve Ayrıştırma Sistemi | Teknofest 2026</title>
-  <meta name="description" content="YOLOv11 yapay zeka modeli ile çalışan akıllı konveyör bant meyve ayrıştırma sistemi. Teknofest 2026 girişim projesi – Mustafa Genç & Ceren Önal." />
+  <title>Akıllı Hasat – Yapay Zeka Destekli Meyve Ayrıştırma Sistemi | Teknofest 2026</title>
+  <meta name="description" content="Yapay zeka ile çalışan akıllı meyve ayrıştırma sistemi. Çürük meyveleri saniyeler içinde ayırt eder, israfı önler. Teknofest 2026 girişim projesi." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -17,7 +17,7 @@
     <div class="nav-inner">
       <div class="nav-logo">
         <span class="logo-icon">🍎</span>
-        <span class="logo-text">Sort<span class="logo-accent">AI</span></span>
+        <span class="logo-text">Akıllı<span class="logo-accent">Hasat</span></span>
       </div>
       <ul class="nav-links">
         <li><a href="#sistem">Sistem</a></li>
@@ -52,9 +52,9 @@
         Ayrıştırıyoruz
       </h1>
       <p class="hero-desc">
-        YOLOv11 tabanlı görüntü işleme ve Raspberry Pi 5 altyapısıyla çalışan
-        tam otomatik konveyör bant sistemi. Çürük meyveyi milisaniyeler içinde
-        tespit eder, üretim hattı verimliliğini katlayarak artırır.
+        Meyve üreticileri için geliştirilen akıllı sistemimiz, çürük ve bozuk meyveleri
+        anında tespit edip ayırır. İsrafı azaltın, kalitenizi artırın, müşterilerinize 
+        her zaman en taze meyveleri sunun.
       </p>
       <div class="hero-actions">
         <a href="#nasil-calisir" class="btn btn-primary">
@@ -82,7 +82,7 @@
     </div>
     <div class="hero-visual">
       <div class="hero-img-wrapper">
-        <img src="assets/hero.png" alt="SortAI Meyve Ayrıştırma Sistemi" id="heroImg" />
+        <img src="assets/hero.png" alt="Akıllı Hasat Meyve Ayrıştırma Sistemi" id="heroImg" />
         <div class="img-glow"></div>
       </div>
     </div>
@@ -94,38 +94,38 @@
       <div class="section-label">Sistem</div>
       <h2 class="section-title">Akıllı Konveyör Bant Otomasyonu</h2>
       <p class="section-desc">
-        Üretim bandından geçen her meyve, iki kamera tarafından anlık olarak görüntülenir.
-        YOLOv11 modeli sağlam ve çürük meyveleri milisaniyeler içinde ayırt eder;
-        servo kollar ve pnömatik kapılar meyveyi doğru sepete yönlendirir.
+        Bant üzerinden geçen her meyve, kameralar tarafından taranır. 
+        Yapay zeka çürük meyveleri anında tespit eder ve otomatik olarak ayrı sepete yönlendirir.
+        Siz sadece izleyin, sistem gerisini halleder.
       </p>
 
       <div class="flow-steps">
         <div class="flow-step reveal">
           <div class="step-icon">📡</div>
           <div class="step-num">01</div>
-          <h3>IR Sensör Algılama</h3>
-          <p>Meyve konveyöre girince giriş IR sensörü sistemi uyandırır ve kamerayı tetikler.</p>
+          <h3>Meyve Algılama</h3>
+          <p>Meyve banda girdiğinde sensörler otomatik olarak sistemi harekete geçirir.</p>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-step reveal">
           <div class="step-icon">📷</div>
           <div class="step-num">02</div>
-          <h3>Çok Açılı Görüntüleme</h3>
-          <p>Üst ve yan kameralar eş zamanlı görüntü alır; step motor meyveyi kendi etrafında döndürür.</p>
+          <h3>Fotoğraf Çekimi</h3>
+          <p>Kameralar meyvenin her açısını görüntüler, hiçbir çürük nokta gözden kaçmaz.</p>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-step reveal">
           <div class="step-icon">🧠</div>
           <div class="step-num">03</div>
-          <h3>YOLOv11 Analizi</h3>
-          <p>Yapay zeka modeli meyvedeki çürük ve lekeleri güven skoru ile birlikte analiz eder.</p>
+          <h3>Yapay Zeka Analizi</h3>
+          <p>Akıllı sistem meyvenin sağlıklı mı yoksa çürük mü olduğunu anında belirler.</p>
         </div>
         <div class="flow-arrow">→</div>
         <div class="flow-step reveal">
           <div class="step-icon">⚙️</div>
           <div class="step-num">04</div>
-          <h3>Mekanik Ayrıştırma</h3>
-          <p>Servo kollar ve kapı meyveyi "Sağlam" veya "Çürük" sepetine yönlendirir.</p>
+          <h3>Otomatik Ayırma</h3>
+          <p>Sağlam meyveler bir tarafa, çürükler diğer tarafa otomatik olarak ayrılır.</p>
         </div>
       </div>
     </div>
@@ -143,29 +143,29 @@
             <div class="feature-item">
               <div class="feature-icon">🔬</div>
               <div>
-                <h4>Anlık Görüntü İşleme</h4>
-                <p>OpenCV ile alınan ham görüntüler filtreler, kırpma ve renk dönüşümlerinden geçerek YOLOv11'e beslenir.</p>
+                <h4>Hızlı Tarama</h4>
+                <p>Her meyve saniyenin onda biri kadar kısa sürede taranır ve analiz edilir.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">⚡</div>
               <div>
-                <h4>Paralel Kamera Mimarisi</h4>
-                <p>İki kamera aynı anda Thread tabanlı paralel işlemle okunur; bant sürekli akar, darboğaz oluşmaz.</p>
+                <h4>Kesintisiz Çalışma</h4>
+                <p>İki kamera aynı anda çalışır, bant hiç durmaz. Üretim hattınız aksamaz.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">🛡️</div>
               <div>
-                <h4>Watchdog Güvenlik Sistemi</h4>
-                <p>Sistem kilitlenirse Watchdog modülü 10 saniyede tespit edip otomatik kurtarma başlatır.</p>
+                <h4>Otomatik Kurtarma</h4>
+                <p>Bir sorun olursa sistem kendini otomatik olarak yeniden başlatır. Müdahale gerekmez.</p>
               </div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">📊</div>
               <div>
-                <h4>Canlı Veri Takibi</h4>
-                <p>TFT dokunmatik ekranda sağlam/çürük sayaçları, CPU sıcaklığı ve RAM kullanımı anlık gösterilir.</p>
+                <h4>Anlık Raporlama</h4>
+                <p>Kaç meyve sağlam, kaç meyve çürük? Ekrandan anlık olarak takip edin.</p>
               </div>
             </div>
           </div>
@@ -177,43 +177,43 @@
             <div class="hw-item">
               <span class="hw-icon">🖥️</span>
               <div>
-                <div class="hw-name">Raspberry Pi 5</div>
-                <div class="hw-desc">Ana kontrol birimi</div>
+                <div class="hw-name">Mini Bilgisayar</div>
+                <div class="hw-desc">Sistemin beyni</div>
               </div>
             </div>
             <div class="hw-item">
               <span class="hw-icon">🤖</span>
               <div>
-                <div class="hw-name">YOLOv11 Modeli</div>
-                <div class="hw-desc">AI görüntü analizi</div>
+                <div class="hw-name">Yapay Zeka</div>
+                <div class="hw-desc">Akıllı görüntü analizi</div>
               </div>
             </div>
             <div class="hw-item">
               <span class="hw-icon">📺</span>
               <div>
-                <div class="hw-name">2.4″ ILI9341 TFT</div>
-                <div class="hw-desc">Dokunmatik arayüz</div>
+                <div class="hw-name">Dokunmatik Ekran</div>
+                <div class="hw-desc">Kolay kontrol paneli</div>
               </div>
             </div>
             <div class="hw-item">
               <span class="hw-icon">⚙️</span>
               <div>
-                <div class="hw-name">L298N Motor Sürücü</div>
-                <div class="hw-desc">Konveyör & LED kontrolü</div>
+                <div class="hw-name">Motor Sistemi</div>
+                <div class="hw-desc">Bant ve ışık kontrolü</div>
               </div>
             </div>
             <div class="hw-item">
               <span class="hw-icon">🎯</span>
               <div>
-                <div class="hw-name">IR Sensörler (3×)</div>
-                <div class="hw-desc">Giriş & çıkış algılama</div>
+                <div class="hw-name">Akıllı Sensörler</div>
+                <div class="hw-desc">Meyve algılama</div>
               </div>
             </div>
             <div class="hw-item">
               <span class="hw-icon">🔄</span>
               <div>
-                <div class="hw-name">Servo & Step Motor</div>
-                <div class="hw-desc">Mekanik ayrıştırma</div>
+                <div class="hw-name">Ayırma Kolu</div>
+                <div class="hw-desc">Otomatik yönlendirme</div>
               </div>
             </div>
           </div>
@@ -228,44 +228,44 @@
       <div class="section-label">Teknoloji Yığını</div>
       <h2 class="section-title">Kullanılan Teknolojiler</h2>
       <p class="section-desc">
-        Endüstriyel düzeyde güvenilirlik için özenle seçilmiş açık kaynaklı araç seti.
+        Sistemimizi güçlü ve güvenilir kılan teknolojiler.
       </p>
 
       <div class="tech-grid">
         <div class="tech-card reveal" style="--clr: #4ade80;">
           <div class="tech-logo">🧠</div>
-          <h3>YOLOv11</h3>
-          <p>Ultralytics'in son nesil nesne tespit modeli. Milisaniyeler içinde çürük bölgeleri tespit eder.</p>
+          <h3>Yapay Zeka Modeli</h3>
+          <p>En güncel nesne tanıma teknolojisi. Çürük meyveleri göz açıp kapayıncaya kadar tespit eder.</p>
           <div class="tech-tag">Yapay Zeka</div>
         </div>
         <div class="tech-card reveal" style="--clr: #60a5fa;">
           <div class="tech-logo">📷</div>
-          <h3>OpenCV</h3>
-          <p>Gerçek zamanlı görüntü akışı, renk dönüşümü ve çerçeve filtresi işlemleri için kullanılır.</p>
+          <h3>Akıllı Kameralar</h3>
+          <p>Meyvelerin her açısını görüntüler ve yapay zekaya analiz için iletir.</p>
           <div class="tech-tag">Görüntü İşleme</div>
         </div>
         <div class="tech-card reveal" style="--clr: #f472b6;">
           <div class="tech-logo">🐍</div>
-          <h3>Python 3.11</h3>
-          <p>Threading, asyncio ve GPIO kütüphaneleriyle entegre tam kontrol sistemi.</p>
+          <h3>Güçlü Yazılım</h3>
+          <p>Tüm sistemi yöneten, hızlı ve güvenilir yazılım altyapısı.</p>
           <div class="tech-tag">Yazılım</div>
         </div>
         <div class="tech-card reveal" style="--clr: #fb923c;">
           <div class="tech-logo">🖥️</div>
-          <h3>Raspberry Pi 5</h3>
-          <p>4-çekirdek ARM Cortex-A76 işlemci ile tüm AI ve GPIO işlemleri tek kart üzerinde yürütülür.</p>
+          <h3>Kompakt Bilgisayar</h3>
+          <p>Avuç içi büyüklüğünde güçlü bir bilgisayar. Tüm işlemleri tek başına yönetir.</p>
           <div class="tech-tag">Donanım</div>
         </div>
         <div class="tech-card reveal" style="--clr: #a78bfa;">
           <div class="tech-logo">🗃️</div>
-          <h3>SQLite</h3>
-          <p>Her ayrıştırma kararı, zaman damgası ve güven skoru ile birlikte yerel veritabanına kaydedilir.</p>
+          <h3>Veri Kayıt Sistemi</h3>
+          <p>Her ayrıştırma kaydedilir. Günlük, haftalık raporlarınıza kolayca ulaşın.</p>
           <div class="tech-tag">Veri</div>
         </div>
         <div class="tech-card reveal" style="--clr: #34d399;">
           <div class="tech-logo">📡</div>
-          <h3>Adafruit CircuitPython</h3>
-          <p>ILI9341 TFT ekran ve XPT2046 dokunmatik sürücüsü SPI üzerinden Raspberry Pi'ye entegre edilir.</p>
+          <h3>Dokunmatik Ekran</h3>
+          <p>Kolay kullanımlı dokunmatik ekran ile sistemi parmak ucunuzdan kontrol edin.</p>
           <div class="tech-tag">Ekran</div>
         </div>
       </div>
@@ -281,7 +281,7 @@
       <div class="compare-table reveal">
         <div class="compare-header">
           <div></div>
-          <div class="compare-col our">SortAI</div>
+          <div class="compare-col our">Akıllı Hasat</div>
           <div class="compare-col other">Geleneksel Yöntem</div>
         </div>
         <div class="compare-row">
@@ -402,10 +402,10 @@
       <div class="footer-inner">
         <div class="footer-logo">
           <span class="logo-icon">🍎</span>
-          <span class="logo-text">Sort<span class="logo-accent">AI</span></span>
+          <span class="logo-text">Akıllı<span class="logo-accent">Hasat</span></span>
         </div>
         <p class="footer-copy">
-          © 2026 SortAI · Mustafa Genç & Ceren Önal · Teknofest Girişimcilik
+          © 2026 Akıllı Hasat · Mustafa Genç & Ceren Önal · Teknofest Girişimcilik
         </p>
         <div class="footer-badge">
           <span>🚀</span> Teknofest 2026
